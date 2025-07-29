@@ -12,10 +12,10 @@ def load_model():
     return joblib.load("xgb_model.joblib")
 
 # Load assets
- df = load_data()
- model = load_model()
- # Extract the model's expected feature names
- feature_names = model.get_booster().feature_names
+df = load_data()
+model = load_model()
+# Extract the model's expected feature names
+feature_names = model.get_booster().feature_names
 
 # ─── 2) APP CONFIG & SIDEBAR INPUTS ───────────────────────────────────────
 st.set_page_config(page_title="Crop Yield Explorer", layout="wide")
